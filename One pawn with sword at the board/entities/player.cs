@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace One_pawn_with_sword_at_the_board.player
+namespace One_pawn_with_sword_at_the_board.Player
 {
   
-    internal class player
+    internal class Player
     {
         public int health;
         public int maxHealth;
         public int damage;
-        public int expiriense;
-        public int expirienseNeed;
+        public int expirience;
+        public int expirienceNeed;
         public int money;
         public int level;
         public int weaponId;
@@ -20,6 +20,7 @@ namespace One_pawn_with_sword_at_the_board.player
         public int defense;
         public int dise;
         public int diseCD;
+        public int heal;
         public static int Attack(int damage, int enemyHealth, int damageBonus)
         {
             return enemyHealth = enemyHealth - damage - damageBonus;
@@ -28,12 +29,31 @@ namespace One_pawn_with_sword_at_the_board.player
         {
             return health = health + defense - enemyDamage;
         }
-        public static int LVup(int expiriense, int health, int defense, int damage)
+        public void addExpirience(int value)
         {
-            return health = health + 10;
-            return defense = defense + 2;
-            return damage = damage + 1;
-            return expiriense = expiriense - 100;
+            this.expirience += value;
+
+            while (this.expirience > this.expirienceNeed)
+            {
+                levelUp();
+                this.expirience -= this.expirienceNeed;
+                this.expirienceNeed = this.expirienceNeed * 2;
+            }
+        }
+
+        private void levelUp()
+        {
+            this.level += 1;
+
+            damage += 1;
+            health += 2;
+            defense += 1;
+            heal += 3;
+            magic += 1;
+        }
+        public static int Heal( int health, int heal)
+        {
+            return health = health + heal;
         }
     }
 }

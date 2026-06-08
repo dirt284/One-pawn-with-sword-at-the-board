@@ -44,6 +44,7 @@
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -133,7 +134,7 @@
             listBox1.FormattingEnabled = true;
             listBox1.Location = new Point(406, 72);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(293, 304);
+            listBox1.Size = new Size(432, 304);
             listBox1.TabIndex = 9;
             // 
             // label9
@@ -147,7 +148,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(116, 393);
+            button1.Location = new Point(209, 393);
             button1.Name = "button1";
             button1.Size = new Size(112, 47);
             button1.TabIndex = 11;
@@ -157,7 +158,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(255, 402);
+            button2.Location = new Point(348, 402);
             button2.Name = "button2";
             button2.Size = new Size(112, 28);
             button2.TabIndex = 12;
@@ -167,7 +168,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(393, 402);
+            button3.Location = new Point(486, 402);
             button3.Name = "button3";
             button3.Size = new Size(112, 28);
             button3.TabIndex = 13;
@@ -177,7 +178,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(539, 402);
+            button4.Location = new Point(632, 402);
             button4.Name = "button4";
             button4.Size = new Size(112, 28);
             button4.TabIndex = 14;
@@ -185,12 +186,22 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
+            // button5
+            // 
+            button5.Location = new Point(75, 392);
+            button5.Name = "button5";
+            button5.Size = new Size(116, 52);
+            button5.TabIndex = 15;
+            button5.Text = "куди подівся фон?";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(700, 450);
+            ClientSize = new Size(876, 450);
+            Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -230,5 +241,6 @@
         private Button button2;
         private Button button3;
         private Button button4;
+        private Button button5;
     }
 }

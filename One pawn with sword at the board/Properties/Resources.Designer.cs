@@ -73,6 +73,16 @@ namespace One_pawn_with_sword_at_the_board.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Тиргівець {
+            get {
+                object obj = ResourceManager.GetObject("Тиргівець", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap фон {
             get {
                 object obj = ResourceManager.GetObject("фон", resourceCulture);
